@@ -1,0 +1,15 @@
+.avatar {
+    border-radius: 10%;
+    color: red;
+    width: 500px;
+}
+
+button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+button:active {
+    background-color: #17ac12;
+    color: white;
+}
