@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Game: React.FC = () => {
+const Game: React.FC<{ sendCommand: (data: JSON) => void }> = ({ sendCommand }) => {
     const [game_ongoing, setGameOngoing] = React.useState(false);
 
     return (
