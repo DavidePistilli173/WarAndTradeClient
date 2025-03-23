@@ -14,8 +14,6 @@ const WarAndTrade: React.FC = () => {
 
     const [page, setPage] = React.useState<String>('main_menu');
 
-    const [game_ongoing, setGameOngoing] = React.useState(false);
-
     let content;
     switch (page) {
         case 'main_menu':
@@ -25,18 +23,14 @@ const WarAndTrade: React.FC = () => {
             content = <NewGame setPage={setPage} />;
             break;
         case 'start_game':
-            setGameOngoing(true);
+            content = <Game />;
             break;
         default:
             content = <MainMenu setPage={setPage} />;
             break;
     }
 
-    return game_ongoing ? (
-        <div>
-            <Game />
-        </div>
-    ) : (
+    return (
         <div>
             {content}
         </div>
